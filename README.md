@@ -1,0 +1,2 @@
+# KAZ-Android
+mobile platform
