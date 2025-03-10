@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical"
-    android:background="#2E3A59">
+    android:background="#303030">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="350dp"
+        android:layout_height="150dp"
         android:src="@drawable/clssic"
         android:layout_gravity="center_horizontal"
         android:layout_marginVertical="12dp">
@@ -24,13 +24,13 @@
         android:layout_marginVertical="12dp"
         android:orientation="vertical"
         android:background="#F5F7FA"
+        android:padding="20dp"
         >
 
         <TextView
-            android:id="@+id/textview_welcomeuser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="lorem ipsum"
+            android:text="User Profile"
             android:textSize="32sp"
             android:textColor="#333333"
             android:layout_gravity="center_horizontal">
@@ -38,18 +38,210 @@
 
         </TextView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abcd@efg.com"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First name: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abcd"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Middle name: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_middlename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="efg"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last name: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_lastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="xyz"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone number: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09229292929"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Role: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F7FA"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Created: "
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textview_created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-1-1111 11:11:11"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/tempbutton_back"
+        android:id="@+id/button_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:textSize="16sp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="4dp"
+        android:background="#fa8072"
+        android:text="Logout"
         android:textColor="#333333"
-        android:background="#FFD700">
+        android:textSize="16sp">
 
     </Button>
 
