@@ -1,248 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home"
+    android:id="@+id/homeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
     android:orientation="vertical"
-    android:background="#303030">
+    android:background="#f0f0f0"
+    tools:context=".HomeActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:src="@drawable/clssic"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="12dp">
-
-    </ImageView>
-
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="12dp"
-        android:orientation="vertical"
-        android:background="#F5F7FA"
-        android:padding="20dp"
-        >
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#121030">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="User Profile"
-            android:textSize="32sp"
-            android:textColor="#333333"
-            android:layout_gravity="center_horizontal">
-
-
-        </TextView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="abcd@efg.com"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="First name: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_firstname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="abcd"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Middle name: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_middlename"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="efg"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Last name: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_lastname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="xyz"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phone number: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_phonenum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="09229292929"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Role: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_role"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#F5F7FA"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date Created: "
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-            <TextView
-                android:id="@+id/textview_created"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1-1-1111 11:11:11"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_gravity="center_horizontal">
-            </TextView>
-
-        </LinearLayout>
-
+            android:text="Hotel Reservation System"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_logout"
+    <!-- Main Content -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="4dp"
-        android:background="#fa8072"
-        android:text="Logout"
-        android:textColor="#333333"
-        android:textSize="16sp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    </Button>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the Dashboard"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upcoming Reservations"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No upcoming reservations"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+<!--        <Button-->
+<!--            android:id="@+id/button_reserve"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Make a Reservation"-->
+<!--            android:background="@drawable/button_p_bg"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:padding="16dp"/>-->
+    </LinearLayout>
+
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/settings_i"
+            android:contentDescription="Settings"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/search_a"
+            android:contentDescription="Home"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/profile_i"
+            android:contentDescription="Profile"
+            android:padding="8dp"/>
+    </LinearLayout>
 </LinearLayout>
