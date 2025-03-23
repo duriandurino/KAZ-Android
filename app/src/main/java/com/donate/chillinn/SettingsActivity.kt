@@ -3,6 +3,8 @@ package com.donate.chillinn
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import com.donate.chillinn.app.AppClass
 
 class SettingsActivity : Activity(){
@@ -14,6 +16,29 @@ class SettingsActivity : Activity(){
         button_logout.setOnClickListener {
             (application as AppClass).token = ""
             val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        val button_profile = findViewById<ImageView>(R.id.button_profile)
+        button_profile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        val button_settings = findViewById<ImageView>(R.id.button_settings)
+        button_settings.setOnClickListener {
+            (application as AppClass).token = ""
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        val button_home = findViewById<ImageView>(R.id.button_home)
+        button_home.setOnClickListener {
+            (application as AppClass).token = ""
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }

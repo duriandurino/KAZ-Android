@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -29,6 +30,29 @@ class HomeActivity : Activity() {
             it.getStringExtra("token")?.let{_token ->
                 (application as AppClass).token = _token
             }
+        }
+
+        val button_profile = findViewById<ImageView>(R.id.button_profile)
+        button_profile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        val button_settings = findViewById<ImageView>(R.id.button_settings)
+        button_settings.setOnClickListener {
+            (application as AppClass).token = ""
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        val button_home = findViewById<ImageView>(R.id.button_home)
+        button_home.setOnClickListener {
+            (application as AppClass).token = ""
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
 
