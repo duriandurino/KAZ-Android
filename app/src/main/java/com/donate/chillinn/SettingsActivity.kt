@@ -27,17 +27,9 @@ class SettingsActivity : Activity(){
             finish()
         }
 
-        val button_settings = findViewById<ImageView>(R.id.button_settings)
-        button_settings.setOnClickListener {
-            (application as AppClass).token = ""
-            val intent = Intent(this, SettingsActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
         val button_home = findViewById<ImageView>(R.id.button_home)
         button_home.setOnClickListener {
-            (application as AppClass).token = ""
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()

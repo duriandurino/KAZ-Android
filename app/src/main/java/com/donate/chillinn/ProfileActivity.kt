@@ -3,6 +3,7 @@ package com.donate.chillinn
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -28,16 +29,16 @@ class ProfileActivity : Activity (){
 
         fetchUserInfo(userToken, textview_email, textview_firstname, textview_lastname, textview_phonenum, textview_role, textview_created)
 
-        val button_profile = findViewById<ImageView>(R.id.button_profile)
-        button_profile.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
+        val button_logout = findViewById<Button>(R.id.button_logout)
+        button_logout.setOnClickListener {
+            (application as AppClass).token = ""
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         val button_settings = findViewById<ImageView>(R.id.button_settings)
         button_settings.setOnClickListener {
-            (application as AppClass).token = ""
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
             finish()
@@ -45,7 +46,6 @@ class ProfileActivity : Activity (){
 
         val button_home = findViewById<ImageView>(R.id.button_home)
         button_home.setOnClickListener {
-            (application as AppClass).token = ""
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
@@ -71,11 +71,11 @@ class ProfileActivity : Activity (){
                 if (response.isSuccessful && responseBody != null) {
                     val jsonResponse = JSONObject(responseBody)
                     val email = jsonResponse.getString("email")
-                    val firstname = jsonResponse.getString("firstname")
-                    val lastname = jsonResponse.getString("lastname")
-                    val phonenum = jsonResponse.getString("phone_num")
+                    val firstname = jsonResponse.getString("first_name")
+                    val lastname = jsonResponse.getString("last_name")
+                    val phonenum = jsonResponse.getString("phone_number")
                     val role = jsonResponse.getString("role")
-                    val created = jsonResponse.getString("created")
+                    val created = jsonResponse.getString("created_at")
 
                     runOnUiThread {
                         emailView.text = email
