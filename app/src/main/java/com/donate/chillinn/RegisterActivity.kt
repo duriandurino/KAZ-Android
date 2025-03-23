@@ -26,7 +26,6 @@ class RegisterActivity : Activity() {
         val edittext_email = findViewById<EditText>(R.id.edittext_email)
         val edittext_password = findViewById<EditText>(R.id.edittext_password)
         val edittext_firstname = findViewById<EditText>(R.id.edittext_firstname)
-        val edittext_middlename = findViewById<EditText>(R.id.edittext_middlename)
         val edittext_lastname = findViewById<EditText>(R.id.edittext_lastname)
         val edittext_phonenum = findViewById<EditText>(R.id.edittext_phonenum)
         val edittext_confirmpassword = findViewById<EditText>(R.id.edittext_confirmpassword)
@@ -36,7 +35,6 @@ class RegisterActivity : Activity() {
             val email = edittext_email.text.toString()
             val password = edittext_password.text.toString()
             val firstname = edittext_firstname.text.toString()
-            val middlename = edittext_middlename.text.toString()
             val lastname = edittext_lastname.text.toString()
             val phonenum = edittext_phonenum.text.toString()
             val confirmPassword = edittext_confirmpassword.text.toString()
@@ -51,16 +49,14 @@ class RegisterActivity : Activity() {
                 return@setOnClickListener
             }
 
-            registerUser(email, password, firstname, middlename, lastname, phonenum)
+            registerUser(email, password, firstname, lastname, phonenum)
         }
     }
-
-    private fun registerUser(email: String, password: String, firstname: String, middlename: String, lastname: String, phonenum: String) {
+    private fun registerUser(email: String, password: String, firstname: String, lastname: String, phonenum: String) {
         val json = JSONObject().apply {
             put("email", email)
             put("password", password)
             put("firstname", firstname)
-            put("middlename", middlename)
             put("lastname", lastname)
             put("phone_num", phonenum)
             put("role", "user")
